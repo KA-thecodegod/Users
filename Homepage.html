@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJKS TEAM CREATIVES - Home Page</title>
+    <style>
+        /* General Styles */
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          margin: 0; /* Remove default margin */
+          padding: 0; /* Remove default padding */
+          background-image: url("https://scontent.fmnl19-1.fna.fbcdn.net/v/t1.15752-9/462638200_1079609333700798_3679035366738009656_n.png?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeH5an4mpBqm4EJOVeNGR3FbLSeX7i_IRVgtJ5fuL8hFWGOk0fvx-xICOhVb5E3iTSNQH4lAB-lE8PyMFiVMmhbQ&_nc_ohc=MzVKQjIrvf4Q7kNvgH1jAmo&_nc_zt=23&_nc_ht=scontent.fmnl19-1.fna&oh=03_Q7cD1QGM7UFsuqKzuE79FSG57NzttFNGwxBHOSKPaxI0zjzxfQ&oe=67754BDC"); /* Change the extension to .jpg */
+          background-size: cover; /* Scale the image to cover */
+          background-position: center; /* Center the image */
+          background-repeat: no-repeat;
+          z-index: -1; 
+          box-sizing: border-box;
+          min-height: 100vh; /* Ensure full viewport height */
+        }
+
+        /* ... other styles ... */ 
+        main {
+          margin-top: 150px; /* To avoid overlapping with headers */
+          padding: 20px;
+        }
+
+        /* Logo */
+        .img-Logo {
+          width: 100px;  /* Adjust logo size as needed */
+          height: auto; /* Maintain aspect ratio */
+        }
+
+          /* Social Media Icons */
+          .social-icons {
+            display: flex;
+            position: absolute;
+            bottom: 5px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+          }
+          .social-icons li {
+            margin: 0 10px;
+          }
+          .social-icons a {
+            color: #ffffff; /* Set default color to white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add subtle shadow to text */
+            transition: color 0.3s ease; /* Transition the color on hover */
+          }
+          .social-icons a:hover {
+            color: #7a6dcf; 
+          }
+
+
+        /* Header */
+                #header {
+          position: sticky;
+          top: 0px; /* This will keep the header at the top of the viewport */
+          width: 100%;
+          /* background: rgba(255, 255, 255, 0); */ /* Remove this line */
+          display: flex;
+          justify-content: space-between; /* Distribute space between elements */
+          align-items: center;
+          padding: 20px;
+          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+          box-sizing: content-box;  /* Corrected spelling */
+          z-index: 10; /* Ensure the header stays on top */
+          gap: 10px; /* Reduced gap between elements */
+        }
+        /* Navigation Buttons */
+        #header nav {
+          display: flex;
+          gap: 20px;
+        }
+
+        #header nav a {
+          text-decoration: none; /* No underline by default */
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 1rem; /* Responsive font size */
+          padding: 10px 15px;
+          border-radius: 5px;
+          position: relative; /* Necessary for the underline effect */
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds subtle shadow to text */
+          transition: color 0.3s ease; /* Transition the color on hover */
+          margin-right: 10px;  /* Adjust this value to control the right margin */
+        }
+
+        /* Add underline and text color change on hover */
+        #header nav a:hover {
+          color: #8387fc; /* Change text color on hover */
+          text-shadow: 2px 2px 6px rgba(122, 109, 207, 0.7); /* Enhances shadow effect on hover */
+        }
+
+        #header nav a:hover::after {
+          content: ""; /* Creates the underline */
+          position: absolute;
+          bottom: 0; /* Places the underline at the bottom of the link */
+          left: 0;
+          width: 100%;
+          height: 2px; /* Thickness of the underline */
+          background-color: #7a6dcf; /* Color of the underline */
+        }
+        /* Responsive Design */
+          @media screen and (max-width: 600px) {
+            #cta-button {
+              margin-right: 5px; /* Smaller margin on smaller screens */
+            }
+          }
+        #cta-button:hover {
+          background: linear-gradient(135deg, #0b6fda, #0099cc); /* Apply the new gradient */
+          color: black;
+        }
+
+
+        /* Buttons Log In/Sign Up */
+        .button {
+        padding: 10px 20px;
+        height: 70px;
+        width: 200px;
+        font-size: 1rem; /* Responsive font size */
+        color: white;
+        background: linear-gradient(135deg, #046ad7a2, #0057b396); /* Gradient background */
+        border: 1px solid rgba(245, 245, 245, 0.554);
+        cursor: pointer;
+        margin-right: 10px;
+        transition: background-color 0.3s ease; /* Transition the background color */
+        }
+
+        /* Hover effect */
+        .button:hover {
+        background: linear-gradient(135deg, #0057b396, #003e73); /* Darker gradient on hover */
+        }
+
+        /* Sign Up button */
+        .button.secondary {
+        background: linear-gradient(135deg, #1e2d3cab, #0d1921a3); /* Gradient background for secondary button */
+        }
+
+        .button.secondary:hover {
+        background: linear-gradient(135deg, #0d1921a3, #000a0f); /* Darker gradient on hover for secondary button */
+        }
+
+          .button-container {
+              display: flex;
+              justify-content: center; /* Centers child elements horizontally within the container */
+              align-items: center; /* Centers child elements vertically within the container */
+              position: absolute; /* Position the container relative to the viewport */
+              top: 65%; /* Push the container 50% from the top of the viewport */
+              left: 50%; /* Push the container 50% from the left of the viewport */
+              transform: translate(-50%, -50%); /* Adjust position back by half the container's width and height */
+              padding: 20px; /* Optional: Adds padding inside the container */
+              gap: 10px; /* Adds spacing between child elements */
+            }
+            
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+          nav a {
+              font-size: 1rem; /* Adjust font size for smaller screens */
+          }
+
+          #cta-button {
+            font-size: 0.8rem; /* Adjust font size for smaller screens */
+            padding: 6px 15px; /* Adjust padding for smaller screens */
+            margin-right: 2px; /* Smaller margin on smaller screens */
+          }
+
+          .button {
+              font-size: 0.8rem; /* Adjust font size for smaller screens */
+          }
+
+          .button-container {
+            flex-direction: column; /* Stack buttons vertically on smaller screens */
+            gap: 10px; /* Add spacing between buttons */
+          }
+        }  
+        /* Main Content Styling */
+        main h1 {
+          text-align: center;
+          margin-top: 50px;
+          font-size: 3em; /* Increased font size */
+          color: white;
+        }
+        main h2 {
+          text-align: center;
+          margin-top: 100px;
+          font-size: 2em; /* Increased font size */
+          color: white;
+        }
+
+        /* Responsive Logo Styling */
+        @media (max-width: 768px) { 
+          .img-Logo {
+            width: 80px;
+          }
+
+          #header h1 {
+            font-size: 1.5em;
+          }
+        }
+
+        @media (max-width: 480px) { 
+          .img-Logo {
+            width: 60px;
+          }
+
+          #header h1 {
+            font-size: 1.2em;
+          }
+        }
+
+        /* Responsive Navigation Styling */
+        @media (max-width: 768px) {
+          #header nav {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          #header nav a {
+            margin-bottom: 10px; 
+          }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <img class="img-Logo" src="https://i.ibb.co/dQYjtYx/JGKS.png" alt="Logo"> 
+        <h1 style="color: white;">GJKS Team Creatives</h1>
+        <nav>
+            <a href="C:\Users\ashlee\OneDrive\Classroomjava\abtnew.html" style="margin-right: 10px;">About Us</a>
+            <a href="C:\Users\ashlee\OneDrive\Classroomjava\services.html" style="margin-right: 10px;">Services</a>
+            <a href="#portfolio" style="margin-right: 10px;">Portfolio</a>
+        </nav>
+    </header>
+    <main>
+        <h1 style="text-align: center; margin-top: 50px;">GJKS Team Creatives</h1>
+        <h2 style="text-align:center; margin-top: 100px;">Custom Websites; Powerful Results</h2>
+    </main>
+    <footer>
+        <ul class="social-icons">
+            <li><a href="https://www.facebook.com/profile.php?id=61569239454634" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png" alt="Facebook" width="30" height="30"></a></li>
+            <li><a href="https://instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" width="30" height="30"></a></li>
+            <li><a href="https://twitter.com" target="_blank"><img src="https://freepnglogo.com/images/all_img/1725374683twitter-x-logo.png" alt="Twitter" width="30" height="30"></a></li>
+        </ul>
+    </footer>
+    <script src="https://static.elfsight.com/platform/platform.js" async>      
+    </script>
+    <div class="elfsight-app-778af194-0f79-42ad-a1e6-897edec4d28e" data-elfsight-app-lazy></div>
+    <script>
+    </script>
+</body>
+</html>

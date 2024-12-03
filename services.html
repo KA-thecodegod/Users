@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GJKS TEAM CREATIVES - Services</title>
+    <style>
+        /* General Styles */
+        body {
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                 margin: 0;
+                  padding: 0;
+                   background-image: url('https://i.ibb.co/sVbCxV2/Untitled-design.gif'); 
+                    background-size: cover; 
+                     background-position: center center;
+                      color: #fff; /* White text */
+        }
+
+        .container {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header */
+        header {
+            background-color: transparent;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff; /* White text */
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #fff; /* White text */
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 1px;
+            position: fixed; /* Make the navigation fixed */
+            top: 0; /* Position it at the top of the viewport */
+            left: 0; /* Position it at the left edge of the viewport */
+            width: 100%; /* Make it full width */
+            z-index: 100; /* Ensure it stays on top of other content */
+            transition: top 0.3s ease; /* Smooth transition for the top property */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px; /* Adjust spacing between icons */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff; /* White text */
+            font-size: 16px;
+            transition: color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        nav ul li a:hover {
+            color: #7a6dcf;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-right: 10px; /* Add margin to the right of the logo */
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            align-items: center; /* Align icons vertically */
+        }
+
+        .social-icons li {
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            font-size: 18px;
+            color: #fff; /* White text */
+            transition: color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .social-icons a:hover {
+            color: #7a6dcf;
+        }
+
+        /* Back Button */
+        .back-button {
+            background-color: transparent; /* Make background transparent */
+            color: #fff; /* White text */
+            padding: 10px 20px;
+            border: none; /* Remove default border */
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px; /* Add some spacing between buttons */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            text-align: center; /* Center the text */
+        }
+
+        .back-button:hover {
+            background-color: #7a6dcf; /* Change background color on hover */
+        }
+
+        /* Action Buttons */
+        .action-button {
+            background-color: transparent; /* Make background transparent */
+            color: #fff; /* White text */
+            padding: 10px 20px;
+            border: none; /* Remove default border */
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0 10px; /* Add some spacing between buttons */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            text-align: center; /* Center the text */
+        }
+
+        .action-button:hover {
+            background-color: #7a6dcf; /* Change background color on hover */
+        }
+
+        /* Contact Icon (Now a Button) */
+        .contact-icon {
+            display: block; /* Makes the icon a block element */
+            margin: 20px auto; /* Center the button horizontally */
+            text-align: center; /* Centers the icon horizontally */
+            background-color: transparent; /* Make the button background transparent */
+            color: #fff; /* White text */
+            padding: 10px 20px; /* Add some padding */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Add a smooth transition for hover effect */
+        }
+
+        .contact-icon:hover {
+            background-color: #7a6dcf; /* Change background color on hover */
+        }
+
+        .contact-icon img {
+            width: 30px; /* Adjust the width as needed */
+            height: auto; /* Maintain the aspect ratio */
+            background-color: transparent; /* Make the image background transparent */
+        }
+
+        /* Text Styles */
+        h1, h2, p {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+            color: #fff; /* Set text color to white */
+        }
+
+        #contact h2 {
+            margin-bottom: 5px; /* Reduce spacing between heading and icon */
+        }
+
+        #contact a {
+            display: block; /* Make the link take up the full width */
+            margin: 0 auto; /* Center the link horizontally */
+        }
+
+        /* Main Content */
+        .content {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-around; /* Distribute items evenly */
+            margin-top: 20px;
+        }
+
+        .service-card {
+            width: 300px; /* Adjust width as needed */
+            min-width: 300px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(0, 0, 0);
+            background-image: url('https://i.ibb.co/sVbCxV2/Untitled-design.gif'); /* Replace with your image URL */
+            opacity: 0.6;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative; /* To position the arrow */
+            transition: transform 0.5s ease; /* Add transition for animation */
+        }
+
+        .service-card h2 {
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .service-card ul {
+            list-style: disc;
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #000000;
+        }
+
+        .service-card a {
+            color: #000000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .service-card a:hover {
+            color: #000000;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff; /* White text */
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        #contact h2 {
+            margin-bottom: 5px; /* Reduce spacing between heading and icon */
+        }
+
+        #contact p {
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-card {
+                width: 100%; /* 1 card per row on smaller screens */
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .logo img {
+                width: 60px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .service-card {
+                width: 100%; /* 1 card per row on smaller screens */
+            }
+
+            .content {
+                flex-direction: column;
+            }
+
+            .logo img {
+                width: 40px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+        }
+
+        /* Add these styles for adaptive navigation */
+        nav ul {
+            display: flex;
+            flex-wrap: wrap; /* Allow items to wrap to the next line */
+            justify-content: space-between; /* Distribute items evenly */
+        }
+
+        nav ul li {
+            flex: 1; /* Each item takes equal width */
+            margin: 0 5px; /* Add some margin for spacing */
+        }
+
+        nav ul li a {
+            display: block; /* Make links occupy full width */
+            padding: 10px; /* Add some padding to links */
+            text-align: center;
+        }
+
+        /* Style for the title */
+        nav h1 {
+            margin: 0 10px; /* Add some margin for spacing */
+            font-size: 1.5em; /* Adjust font size as needed */
+            color: #fff; /* White text */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a subtle text shadow */
+        }
+
+        /* Styles for the hero image */
+        .IMAGE img {
+            width: 100%; /* Make the image full width */
+            height: 300px; /* Adjust the height as needed */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 10px; /* Add some spacing above the image */
+        }
+
+        .IMAGE img {
+                   display: block; /* Ensure the image takes up the full width */
+                    width: 100%;
+                     height: 100%;
+                      object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+                   }
+
+
+        /* Navigation Bar for Smaller Devices */
+        @media screen and (max-width: 768px) {
+            nav ul {
+                display: none; /* Hide the navigation list by default */
+                position: absolute; /* Position the list absolutely */
+                top: 100%; /* Position below the logo */
+                left: 0; /* Align to the left */
+                width: 100%; /* Full width */
+                background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+                padding: 15px;
+                border-radius: 5px;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+                color: #fff; /* White text */
+                text-decoration: none;
+            }
+
+            .logo {
+                cursor: pointer; /* Make the logo clickable */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1></h1>
+            <p></p>
+        </header>
+
+        <nav>
+            <div class="logo">
+                <img src="C:\Users\ashlee\Downloads\logo.png" alt="Logo">
+            </div>
+            <h1>GJKS TEAM CREATIVES</h1>
+            <ul class="social-icons">
+                <li>
+                    <a href="C:\Users\ashlee\OneDrive\Classroomjava\Homepagenow.html" class="back-button">Back to Homepage</a> 
+                </li>
+                <li><a href="file:///C:/Users/ashlee/OneDrive/Classroomjava/about%20us.html">About us</a></li>
+                <li><a href="#" class="action-button">Portfolio</a></li>
+                <li> 
+                    </a>
+                </li>
+                <li><a href="https://www.facebook.com/profile.php?id=61569239454634" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png" alt="Facebook" width="30" height="30"></a></li>
+                <li><a href="https://instagram.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1024px-Instagram_icon.png" alt="Instagram" width="30" height="30"></a></li>
+                <li><a href="https://twitter.com" target="_blank"><img src="https://freepnglogo.com/images/all_img/1725374683twitter-x-logo.png" alt="Twitter" width="30" height="30"></a></li>
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gjks.teamcreatives@gmail.com&su=SUBJECT&body=BODY&bcc=gjks.teamcreatives@gmail.com" target="_blank"><img src="https://png.pngtree.com/template/20190725/ourmid/pngtree-gmail-logo-png-image_282635.jpg" alt="Gmail" width="40" height="40"></a></li>
+            </ul>
+        </nav>  
+
+        <div class="IMAGE">
+            <img src="C:\Users\ashlee\Downloads\Untitled_design-removebg-preview.png" alt="Hero Image">
+        </div>
+
+        <div class="content">
+            <div class="service-card">
+                <h2>Custom Website Development</h2>
+                <p>We craft bespoke websites tailored to your unique business needs, ensuring a seamless and engaging online experience for your audience.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>Responsive Web Design</h2>
+                <p>Our websites are designed to adapt flawlessly to any device, providing an optimal viewing experience across desktops, tablets, and mobile phones.</p>
+            </div>
+
+            <div class="service-card">
+                <h2>E-commerce Solutions</h2>
+                <p>We build robust and secure online stores that empower you to sell your products and services online with ease.</p>
+                <ul>
+                    <li>Product Catalog Management</li>
+                    <li>Secure Payment Integration</li>
+                    <li>Order Tracking and Fulfillment</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h2>SEO Optimization</h2>
+                <p>We optimize your website for search engines, ensuring that your content is easily discoverable by potential customers.</p>
+                <ul>
+                    <li>Keyword Research</li>
+                    <li>On-Page Optimization</li>
+                    <li>Link Building</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <h2>Website Maintenance</h2>
+                <p>We provide ongoing website maintenance services to keep your site running smoothly and securely.</p>
+                <ul>
+                    <li>Regular Updates and Backups</li>
+                    <li>Security Monitoring</li>
+                    <li>Performance Optimization</li>
+                </ul>
+            </div>
+
+        </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <script src="https://static.elfsight.com/platform/platform.js" async>      
+    </script>
+<div class="elfsight-app-778af194-0f79-42ad-a1e6-897edec4d28e" data-elfsight-app-lazy></div>
+    <script>
+        window.onscroll = function() {
+            var nav = document.querySelector("nav");
+            var sticky = nav.offsetTop;
+
+            if (window.pageYOffset >= sticky) {
+                nav.classList.add("sticky");
+            } else {
+                nav.classList.remove("sticky");
+            }
+        };
+        // Add a class to the nav when it's sticky
+        nav.classList.add("sticky");
+        
+        const logo = document.querySelector(".logo");
+        const navList = document.querySelector("nav ul");
+
+        logo.addEventListener("click", () => {
+            navList.classList.toggle("show"); // Toggle the "show" class
+        });
+    </script>
+</body>
+</html>
